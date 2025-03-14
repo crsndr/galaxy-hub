@@ -2,14 +2,14 @@
 title: Storage Management on the European Galaxy server
 ---
 
-Storage provides our users freedom to play around with their data and enables exploratory research, but it is also a limited resource for public Galaxy instances.
+Storage provides our users freedom to play around with their data and enables exploratory research. It is also a limited resource for public Galaxy instances.
 Thanks to the [de.NBI cloud](https://www.denbi.de/cloud) and the [Uni-Freiburg compute center](https://www.rz.uni-freiburg.de) the European Galaxy server
-is managing 3PB of data today (2025/01).
+is managing, as today 2025/01, 3PB of data.
 Users access this storage for free; governments are paying for the freedom of science and against being locked into some commercial system.
-Everyone gets a fair share of the storage, on the [EU Galaxy server](https://usegalaxy.eu) those are 250 GB for every user, also called `quota`.
+Every user gets a 250GB share of the storage, called `quota`, on the [EU Galaxy server](https://usegalaxy.eu).
 
-This system has served us well for many years. However, different user groups have varying storage needs, and some also contribute
-financially to the global Galaxy infrastructure. Until now, we have addressed this by generously extending storage quotas upon request via our quota-request form.
+While this system has served us well for many years, different user groups have varying storage needs, and some contribute
+financially to the global Galaxy infrastructure. Up until now this has been addressed by generously extending storage quotas upon request via our quota-request form.
 We remain committed to expanding our storage capacity through future grants and we will also keep the quota-request form.
 
 That said, long-term sustainability is a growing challenge as the number of users increases. To address this, the Galaxy community
@@ -26,7 +26,7 @@ has introduced advanced Research Data Management (RDM) features, including:
 
 # Manage your Storage and Quota
 
-On the European Galaxy server every user has a 250 GB quota. This means you can use 250 GB of storage for free.
+On the European Galaxy server every user has a 250GB quota for free.
 Once you reach this limit you cannot start new jobs. [Learn more about quotas.](https://galaxyproject.org/support/account-quotas/)
 
 <div align="center">
@@ -79,11 +79,11 @@ We call those `remote file sources` and you can configure those under your [user
 you can include repositories based on [InvenioRDM](https://inveniosoftware.org/products/rdm/), [Dataverse](https://dataverse.org), FTP, Google Drive, DropBox, AWS, S3 and [WebDav](https://en.wikipedia.org/wiki/WebDAV),
 which includes NextCloud, OpenCloud, [EUDAT B2Drop](https://www.eudat.eu/service-catalogue/b2drop) and many others.
 
-👉 If you know about **public** repositories that can be useful for more Galaxy users, please get in [contact](mailto:contact@usegalaxy.eu)
-and we add it to our default `remote file sources` for all users.
+👉 If you know about **public** repositories that can be useful for more Galaxy users, please get in touch ([contact@usergalaxy.eu](mailto:contact@usegalaxy.eu))
+and we can add it to our default `remote file sources` for all users.
 
 A relatively unknown feature in Galaxy is what we call `deferred data`. You can import data as `deferred`, which will not download the data into your history
-and therefore not count towards your Quota. `deferred data` will be temporarily downloaded when you do the first calculation on top of it, but it will
+and therefore not count towards your quota. `deferred data` will be temporarily downloaded when you do the first calculation on top of it, but it will
 not be ingested into Galaxy storage. This feature is especially useful if you have large RAW data that is reduced in size in the first step. Please note that
 this feature only works if the data is accessible for Galaxy, e.g. via a URL.
 
