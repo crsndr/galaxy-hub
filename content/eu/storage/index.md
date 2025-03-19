@@ -3,14 +3,13 @@ title: Storage Management on the European Galaxy server
 ---
 
 Storage provides our users freedom to play around with their data and enables exploratory research, but it is also a limited resource for public Galaxy instances.
-Thanks to the [de.NBI cloud](https://www.denbi.de/cloud) and the [Uni-Freiburg compute center](https://www.rz.uni-freiburg.de) the European Galaxy server
-is managing 3PB of data today (2025/01).
+Thanks to the [de.NBI cloud](https://www.denbi.de/cloud) and the [Uni-Freiburg compute center](https://www.rz.uni-freiburg.de) the European Galaxy server, as of 01/2025, is managing 3PB.
 Users access this storage for free; governments are paying for the freedom of science and against being locked into some commercial system.
-Everyone gets a fair share of the storage, on the [EU Galaxy server](https://usegalaxy.eu) those are 250 GB for every user, also called `quota`.
+Everyone gets a fair share of the storage,  also called `quota`, on the [EU Galaxy server](https://usegalaxy.eu) those are 250GB for every user.
 
-This system has served us well for many years. However, different user groups have varying storage needs, and some also contribute
-financially to the global Galaxy infrastructure. Until now, we have addressed this by generously extending storage quotas upon request via our quota-request form.
-We remain committed to expanding our storage capacity through future grants and we will also keep the quota-request form.
+This system has served us well for many years. Different user groups have varying storage needs, and some also contribute
+financially to the global Galaxy infrastructure. As a consequence we have addressed this by generously extending storage quotas upon request via our quota-request form.
+We remain committed to expand our storage capacity through future grants and we will also keep the quota-request form.
 
 That said, long-term sustainability is a growing challenge as the number of users increases. To address this, the Galaxy community
 has introduced advanced Research Data Management (RDM) features, including:
@@ -26,7 +25,7 @@ has introduced advanced Research Data Management (RDM) features, including:
 
 # Manage your Storage and Quota
 
-On the European Galaxy server every user has a 250 GB quota. This means you can use 250 GB of storage for free.
+On the European Galaxy server, every user has a 250GB quota. This means you can use 250GB of storage for free.
 Once you reach this limit you cannot start new jobs. [Learn more about quotas.](https://galaxyproject.org/support/account-quotas/)
 
 <div align="center">
@@ -80,7 +79,7 @@ you can include repositories based on [InvenioRDM](https://inveniosoftware.org/p
 which includes NextCloud, OpenCloud, [EUDAT B2Drop](https://www.eudat.eu/service-catalogue/b2drop) and many others.
 
 👉 If you know about **public** repositories that can be useful for more Galaxy users, please get in [contact](mailto:contact@usegalaxy.eu)
-and we add it to our default `remote file sources` for all users.
+and we can add it to our default `remote file sources` for all users.
 
 A relatively unknown feature in Galaxy is what we call `deferred data`. You can import data as `deferred`, which will not download the data into your history
 and therefore not count towards your Quota. `deferred data` will be temporarily downloaded when you do the first calculation on top of it, but it will
@@ -197,17 +196,17 @@ supporting reproducible and reusable research workflows.
 
 POSIX/NFS-based storage maintained by the compute center of the University of Freiburg.
 In contrast to the `Short term storage` data will not be deleted on this storage.
-You need to [clean up your data](#manage-your-storage-and-quota) to stay below your quota of 250 GB.
-The data is stored on a high-available data storage and you are allowed to share the data with everyone.
+You need to [clean up your data](#manage-your-storage-and-quota) to stay below your quota of 250GB.
+The data is stored on a high-available data storage and you can to share the data with everyone.
 
 
 ## Short term storage
 
 S3-based object storage is maintained by the compute center of the University of Freiburg.
-This storage, also called scratch-storage, with data `purged` after 60 days after creation and so it is only appropriate for short-term methods development and such.
+This storage, also called scratch-storage, with data `purged` after 60 days after creation. It is only appropriate, for example, short-term methods development.
 The rapid deletion of stored data enables us to provide this storage without a quota. This storage is not backed up.
 
-The automatic cleaning of this storage works like this:
+The automatic cleaning of this storage works as following:
 * every weekend Galaxy will iterate over all datasets included in the `Short term storage`
 * data older then **60** days will be `deleted`
 * a few days later all `deleted` datasets are `purged`
@@ -234,13 +233,13 @@ The data on this storage is counted to the same 250 GB quota as the `Long-term s
 ### User Owned storage
 
 Every user can [include their own storage](https://usegalaxy.eu/object_store_instances/index).
-If your Institute provides you with S3, iRODS, [OneData](https://onedata.org/) ... this option is for you. Because Galaxy
+If your Institute provides you with S3, iRODS, [OneData](https://onedata.org/), this option is for you. Because Galaxy
 is not managing this storage, there will be no quota assigned, but the limit of your storage applies 😎
 
 Once you have registered your storage in Galaxy you can run tools and workflows against it. You can set a history to default to this storage or you can set it as global 
 default storage to your account. See a tutorial [here](https://galaxyproject.org/news/2024-09-20-esg-byos-im/).
 
-⚠️ This type of storage provides you a lot of flexibility, however, data acess to this storage needs to be transferred over potentially long distances. This
+⚠️ This type of storage provides you a lot of flexibility, however, data access to this storage needs to be transferred over potentially long distances. This
 has implications for carbon emissions and performance.
 
 <div align="center">
@@ -264,7 +263,7 @@ Demonstrator: The [NFDI](https://www.nfdi.de) (National Research Data Infrastruc
 is [DataPLANT](https://nfdi4plants.org). DataPLANT has access to the bwSFS, a state-funded storage for scientists
 and in this case in particular for fundamental plant research. In cooperation with [DataPLANT](https://www.nfdi4plants.org) we have included part of this storage into
 Galaxy and have configured Galaxy to store data from users associated with DataPLANT on this particular storage only.
-This enables DataPLANT now to decide about their preferred quota limits, and the level of data backup policies and fosters the participation of NFDI with the Galaxy project.
+This enables DataPLANT now to decide their preferred quota limits and the level of data backup policies and fosters the participation of NFDI with the Galaxy project.
 
 The system is very flexible and we could enable research networks, like Collaborative Research Centres, in the same way, to participate in the European Galaxy project and offer
 sustainable storage solutions for their researchers. It is to be noted that this covers the technical aspect of storage infrastructure but is only a small aspect of
@@ -286,8 +285,8 @@ Before you request an additional quota, please make sure that:
 - None of the above options is working for you
 
 Please bear in mind that the change will be only effective after being granted, which can take a few working days.
-After the requested extension period ends, your quota will be back to the standard 250 GB. Your data won't be removed, but you won't be able to launch any jobs
-in Galaxy until you free up space and are again under 250 GB.
+After the requested extension period ends, your quota will be back to the standard 250GB. Your data won't be removed, but you won't be able to launch any jobs
+in Galaxy until you free up space and are again under 250GB.
 
 
 <!-- we need to update the  policy, as soon as we have the new scratch in place -->
